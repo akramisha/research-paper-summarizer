@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Turn dense research papers into clear, useful summaries with Paperly." />
+    <title>Paperly — Research, made readable.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Playfair+Display:ital,wght@600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#summarize">Skip to the uploader</a>
+
+    <header class="hero" id="top">
+        <div class="hero-image" aria-hidden="true"></div>
+        <div class="hero-scrim" aria-hidden="true"></div>
+
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="#top" aria-label="Paperly home">
+                <span class="brand-mark"><i></i><i></i><i></i></span>
+                <span>PAPERLY</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                <span></span><span></span>
+            </button>
+            <div class="nav-links">
+                <a href="#how-it-works">How it works</a>
+                <a href="#summarize">Summarize</a>
+                <a class="nav-cta" href="#summarize">Try it free <span>↗</span></a>
+            </div>
+        </nav>
+
+        <div class="hero-content container">
+            <div class="hero-copy">
+                <p class="eyebrow light"><span></span> Your research companion</p>
+                <h1>Research papers,<br /><em>made readable.</em></h1>
+                <p class="hero-description">Drop in a dense paper. Get the important ideas, methodology, and conclusions
+                    — distilled into a clear summary in moments.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#summarize">Summarize a paper <span>↓</span></a>
+                    <a class="text-link light-link" href="#how-it-works">See how it works <b>→</b></a>
+                </div>
+                <div class="hero-meta">
+                    <div class="avatar-stack" aria-hidden="true"><span>R</span><span>A</span><span>S</span></div>
+                    <p><strong>Built for curious minds.</strong><br />No account. Nothing stored.</p>
+                </div>
+            </div>
+
+            <aside class="hero-note" aria-label="Summary preview">
+                <div class="note-top"><span class="pulse-dot"></span><span>SUMMARY READY</span><span
+                        class="note-time">01:42</span></div>
+                <div class="note-rule"></div>
+                <p class="note-label">THE CENTRAL IDEA</p>
+                <p class="note-text">Better science begins when complex knowledge is made <mark>accessible to
+                        everyone.</mark></p>
+                <div class="note-bottom"><span>12 min paper</span><span>·</span><span>2 min read</span></div>
+            </aside>
+        </div>
+        <a class="scroll-cue" href="#how-it-works" aria-label="Scroll to discover"><span></span> Scroll to discover</a>
+    </header>
+
+    <main>
+        <section class="how-section section" id="how-it-works">
+            <div class="container">
+                <div class="section-heading centered">
+                    <p class="eyebrow"><span></span> The simple way through</p>
+                    <h2>Less time decoding.<br /><em>More time discovering.</em></h2>
+                    <p>Paperly finds the signal in the noise, so you can focus on what moves your thinking forward.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <article class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon upload-icon" aria-hidden="true"><span>↑</span></div>
+                        <h3>Share the paper</h3>
+                        <p>Upload any research PDF. Your file is handled securely and disappears after your session.</p>
+                    </article>
+                    <article class="step-card featured-step">
+                        <div class="step-number">02</div>
+                        <div class="step-icon spark-icon" aria-hidden="true"><span>✦</span></div>
+                        <h3>We find the thread</h3>
+                        <p>AI reads across the paper to identify the question, method, evidence, and the ideas that
+                            matter.</p>
+                    </article>
+                    <article class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon book-icon" aria-hidden="true"><span></span><span></span></div>
+                        <h3>Read with clarity</h3>
+                        <p>Receive a structured, jargon-light summary you can understand, save, and come back to.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="summarize-section section" id="summarize">
+            <div class="container">
+                <div class="upload-intro">
+                    <div>
+                        <p class="eyebrow light"><span></span> Start here</p>
+                        <h2>A clearer read is<br /><em>one upload away.</em></h2>
+                    </div>
+                    <p>Choose a paper and let Paperly do the first pass. It is free, fast, and entirely yours to
+                        explore.</p>
+                </div>
+
+                <div class="uploader-shell">
+                    <form class="upload-card" id="uploadForm" novalidate>
+                        <input type="file" id="paperInput" accept="application/pdf,.pdf" hidden />
+                        <div class="drop-zone" id="dropZone" tabindex="0" role="button"
+                            aria-label="Choose a PDF paper or drag it here">
+                            <div class="drop-art" aria-hidden="true">
+                                <div class="paper-sheet"><i></i><i></i><i></i><i></i></div>
+                                <div class="upload-orbit"><span>↑</span></div>
+                            </div>
+                            <h3>Drop your paper here</h3>
+                            <p>or <button type="button" class="browse-link" id="browseButton">browse files</button> from
+                                your device</p>
+                            <small>PDF only · Up to 25 MB · Nothing is stored</small>
+                        </div>
+                        <div class="file-selected" id="fileSelected" aria-live="polite">
+                            <div class="file-badge">PDF</div>
+                            <div class="file-info"><strong id="fileName">paper.pdf</strong><span id="fileSize">Ready to
+                                    summarize</span></div>
+                            <button class="clear-file" type="button" id="clearFile"
+                                aria-label="Remove selected file">×</button>
+                        </div>
+                        <p class="form-message" id="formMessage" role="status"></p>
+                        <button class="button button-coral generate-button" type="submit">Generate my summary
+                            <span>→</span></button>
+                        <p class="privacy-note"><span class="lock-icon">⌑</span> Your paper is processed only for this
+                            summary.</p>
+                    </form>
+
+                    <aside class="process-card" aria-label="What Paperly will analyze">
+                        <p class="mini-heading">WHAT YOU’LL GET</p>
+                        <ul>
+                            <li><span class="check">✓</span>
+                                <div><strong>The main question</strong><small>What the research sets out to
+                                        answer</small></div>
+                            </li>
+                            <li><span class="check">✓</span>
+                                <div><strong>The method & evidence</strong><small>How the authors reached their
+                                        findings</small></div>
+                            </li>
+                            <li><span class="check">✓</span>
+                                <div><strong>Key takeaways</strong><small>The knowledge worth carrying forward</small>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="process-quote"><span>“</span>
+                            <p>A good summary does not make a paper smaller. It makes its meaning easier to find.</p>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="processing" id="processing" aria-live="polite" aria-hidden="true">
+                    <div class="processing-head">
+                        
+                        <div><strong>Reading your paper</strong><span id="processingText">Preparing your
+                                document…</span></div><span id="processingPercent">0%</span>
+                    </div>
+                    <div class="progress-track">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+                    <div class="process-steps"><span class="active">Extracting text</span><span>Finding key
+                            ideas</span><span>Writing summary</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="result-section section" id="your-summary" aria-live="polite">
+            <div class="container">
+                <div class="result-empty" id="resultEmpty">
+                    <span class="empty-star">✦</span>
+                    <p>Your clear, structured summary will appear here.</p>
+                </div>
+
+                <div class="result-wrap" id="resultWrap" hidden>
+                    <div class="result-heading">
+                        <div>
+                            <p class="eyebrow"><span></span> Your reading, distilled</p>
+                            <h2>Here’s the <em>big picture.</em></h2>
+                        </div>
+                        <button class="button button-dark" id="downloadBtn" type="button">Download summary
+                            <span>↓</span></button>
+                    </div>
+
+                    <div class="summary-paper" id="summaryPaper">
+                        <div class="paper-header">
+                            <div class="paper-title-group"><span class="paper-file-icon">PDF</span>
+                                <div>
+                                    <p id="resultFileName">Research paper.pdf</p><small>AI-generated reading
+                                        companion</small>
+                                </div>
+                            </div>
+                            <div class="read-time"><span>◷</span> 2 min read</div>
+                        </div>
+                        <div class="paper-line"></div>
+
+                        <div class="summary-lead">
+                            <p class="summary-label">IN ONE BREATH</p>
+                            <p id="summaryLead">Your one-line takeaway will appear here.</p>
+                        </div>
+
+                        <div class="summary-grid">
+                            <article class="summary-block">
+                                <p class="summary-label">THE QUESTION</p>
+                                <h3 id="questionTitle">The main question</h3>
+                                <p id="questionBody">What the paper is trying to answer will appear here.</p>
+                            </article>
+                            <article class="summary-block">
+                                <p class="summary-label">THE APPROACH</p>
+                                <h3 id="approachTitle">The method</h3>
+                                <p id="approachBody">How the authors investigated it will appear here.</p>
+                            </article>
+                            <article class="summary-block conclusion">
+                                <p class="summary-label">THE CONCLUSION</p>
+                                <h3 id="conclusionTitle">The conclusion</h3>
+                                <p id="conclusionBody">What the authors found will appear here.</p>
+                            </article>
+                            <article class="summary-block findings">
+                                <p class="summary-label">KEY TAKEAWAYS</p>
+                                <ul id="takeawaysList">
+                                    <li>Key takeaways will appear here.</li>
+                                </ul>
+                            </article>
+                        </div>
+                        <div class="paper-footer"><span>Generated by <strong>Paperly</strong></span><span>Read deeply.
+                                Start anywhere.</span></div>
+                    </div>
+                    <p class="summary-disclaimer">This is an AI-generated overview to support your reading, not a
+                        replacement for the original paper.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <a class="brand footer-brand" href="#top"><span
+                        class="brand-mark"><i></i><i></i><i></i></span><span>PAPERLY</span></a>
+                <p>Making space for<br />better questions.</p>
+                <a class="footer-top" href="#top">Back to top <span>↑</span></a>
+            </div>
+            <div class="footer-bottom"><span>© 2026 Paperly. Made for curious minds.</span>
+                <div><a href="#summarize">Privacy</a><a href="#summarize">Terms</a><a href="#summarize">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
